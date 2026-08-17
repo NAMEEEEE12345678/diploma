@@ -1,0 +1,10 @@
+import { apiRequest } from "./client";
+const withToken = (token) => ({ token });
+export const getTrips = (token) => apiRequest("/api/v1/trips", withToken(token));
+export const getTrip = (token, id) => apiRequest(`/api/v1/trips/${id}`, withToken(token));
+export const createTrip = (token, data) => apiRequest("/api/v1/trips", { ...withToken(token), method: "POST", body: JSON.stringify(data), successMessage: "Поездка сохранена" });
+export const addItem = (token, tripId, dayId, data) => apiRequest(`/api/v1/trips/${tripId}/days/${dayId}/items`, { ...withToken(token), method: "POST", body: JSON.stringify(data), successMessage: "Место добавлено в маршрут" });
+export const deleteItem = (token, tripId, dayId, itemId) => apiRequest(`/api/v1/trips/${tripId}/days/${dayId}/items/${itemId}`, { ...withToken(token), method: "DELETE", successMessage: "Место удалено из маршрута" });
+export const updateItem = (token, tripId, dayId, itemId, data) => apiRequest(`/api/v1/trips/${tripId}/days/${dayId}/items/${itemId}`, { ...withToken(token), method: "PUT", body: JSON.stringify(data), successMessage: "Маршрут обновлён" });
+export const generateItinerary = (token, tripId) => apiRequest(`/api/v1/trips/${tripId}/generate-itinerary`, { ...withToken(token), method: "POST", successMessage: "Маршрут создан" });
+export const deleteTrip = (token, tripId) => apiRequest(`/api/v1/trips/${tripId}`, { ...withToken(token), method: "DELETE", successMessage: "Поездка удалена" });
