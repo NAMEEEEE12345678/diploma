@@ -43,6 +43,14 @@ Frontend: React, JavaScript, Vite, React Router, Leaflet, React Leaflet, CSS.
     └── package.json
 ```
 
+
+
+![Uploading 34e29086-dc02-46a4-9de5-b37da448e566.png…]()
+
+
+
+
+
 ## Требования
 
 - Python 3.11+ (проект проверен с Python 3.13).
