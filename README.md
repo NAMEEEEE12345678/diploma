@@ -45,7 +45,7 @@ Frontend: React, JavaScript, Vite, React Router, Leaflet, React Leaflet, CSS.
 
 
 
-![Uploading 34e29086-dc02-46a4-9de5-b37da448e566.png…]()
+<img width="1920" height="1080" alt="Снимок экрана (162)" src="https://github.com/user-attachments/assets/2ecd852c-912b-47bf-8e54-be5867c0a789" />
 
 
 
